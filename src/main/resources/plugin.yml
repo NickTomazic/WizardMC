@@ -1,0 +1,21 @@
+name: ${project.name}
+main: ${project.groupId}.${project.artifactId}.Main
+version: ${project.version}
+author: NickDEV
+website: http://nickdev.me
+description: ${project.name}-v${project.version}
+commands:
+  wizard:
+    usage: /<command>
+    description: Default plugin command.
+    aliases: [wizards, w, wizardmc]
+permissions:
+  wizard.*:
+    default: op
+    description: Grants you all the plugin's permissions.
+    children:
+      wizard.use: true
+  wizard.use:
+    default: op
+  wizard.gui:
+    default: op
