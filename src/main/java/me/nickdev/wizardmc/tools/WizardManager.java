@@ -23,7 +23,7 @@ public class WizardManager implements ListenerComponent {
     private WizardMenu wizardMenu;
 
     public WizardManager(Main main) {
-        this.outfitManager = new OutfitManager();
+        this.outfitManager = new OutfitManager(main);
         this.spellManager = new SpellManager();
         this.wandManager = new WandManager(main, this);
         this.wizardMenu = new WizardMenu(main, this);

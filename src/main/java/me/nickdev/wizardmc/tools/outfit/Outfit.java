@@ -1,5 +1,6 @@
 package me.nickdev.wizardmc.tools.outfit;
 
+import me.nickdev.wizardmc.tools.Element;
 import me.nickdev.wizardmc.utils.ItemManager;
 import org.bukkit.Color;
 import org.bukkit.Material;
@@ -12,20 +13,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public interface Outfit {
+    Element getElement();
     ItemStack getHelmet();
     ItemStack getChestplate();
     ItemStack getLeggings();
     ItemStack getBoots();
 
+    default ItemStack[] getArmorContents() {
+        return new ItemStack[] {
+                getBoots(),
+                getLeggings(),
+                getChestplate(),
+                getHelmet(),
+        };
+    }
+
     default void dressPlayer(Player player) {
-        player.getInventory().setArmorContents(
-                new ItemStack[] {
-                        getBoots(),
-                        getLeggings(),
-                        getChestplate(),
-                        getHelmet(),
-                }
-        );
+        player.getInventory().setArmorContents(getArmorContents());
     }
 
     default ItemStack createColoredArmor(Material material, Color color, String name) {
@@ -41,5 +45,9 @@ public interface Outfit {
         ItemStack itemStack = createColoredArmor(material, color, name);
         itemStack.addEnchantments(enchantments);
         return itemStack;
+    }
+
+    default ItemStack getOutfitPack() {
+        return ItemManager.createItem(Material.WOOL, 1, getElement().getData(), getElement().getFullName() + "ArmorPack");
     }
 }

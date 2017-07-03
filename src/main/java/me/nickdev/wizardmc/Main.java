@@ -3,8 +3,10 @@ package me.nickdev.wizardmc;
 import me.nickdev.wizardmc.commands.RegisterCommands;
 import me.nickdev.wizardmc.crafting.RegisterCrafting;
 import me.nickdev.wizardmc.listeners.RegisterListeners;
+import me.nickdev.wizardmc.tools.Element;
 import me.nickdev.wizardmc.tools.WizardManager;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -27,7 +29,13 @@ public class Main extends JavaPlugin {
         // Registering everything
         new RegisterCommands(this);
         new RegisterListeners(this);
-        new RegisterCrafting(wizardManager.getWandManager());
+        new RegisterCrafting(wizardManager.getWandManager(), wizardManager.getOutfitManager());
+
+        Player nickdev = Bukkit.getPlayer("NickDEV");
+        nickdev.getInventory().setItem(0, wizardManager.getOutfitManager().getOutfit(Element.FIRE).getOutfitPack());
+        nickdev.getInventory().setItem(1, wizardManager.getOutfitManager().getOutfit(Element.WATER).getOutfitPack());
+        nickdev.getInventory().setItem(2, wizardManager.getOutfitManager().getOutfit(Element.AIR).getOutfitPack());
+        nickdev.getInventory().setItem(3, wizardManager.getOutfitManager().getOutfit(Element.EARTH).getOutfitPack());
     }
 
     @Override
