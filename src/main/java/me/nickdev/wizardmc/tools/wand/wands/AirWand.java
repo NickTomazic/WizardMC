@@ -33,6 +33,7 @@ public class AirWand implements Wand {
         return new LinkedList<>(Arrays.asList(
                 SpellType.AIRJUMP,
                 SpellType.AIRFLY,
+                SpellType.AIRSHOOT,
 
                 SpellType.HEAL
         ));

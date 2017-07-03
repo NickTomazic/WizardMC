@@ -21,4 +21,10 @@ public class MobManager {
             }
         }.runTaskLater(main, despawnTicks);
     }
+
+    public static void spawnMob(Main main, Location location, EntityType entityType, String entityName) {
+        Entity entity = location.getWorld().spawnEntity(location, entityType);
+        entity.setCustomNameVisible(true);
+        entity.setCustomName(entityName);
+    }
 }

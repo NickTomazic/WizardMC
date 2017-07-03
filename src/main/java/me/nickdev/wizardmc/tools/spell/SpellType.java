@@ -8,14 +8,15 @@ public enum SpellType {
     HEAL(HealSpell.class),
 
     // Fire spells
-    FIRECIRCLE(FireCircleSpell.class),
+    FIRECREEPER(FireCreeperAttackSpell.class),
     FIREEXPLOSION(FireExplosionSpell.class),
     FIRELIGHTNING(FireLightningSpell.class),
-    FIRESHIELD(FireShieldSpell.class),
+    FIREBLOCK(FireBlockSpell.class),
 
     // Air spells
     AIRJUMP(AirJumpSpell.class),
     AIRFLY(AirFlySpell.class),
+    AIRSHOOT(AirShootSpell.class),
 
     // Earth spells
     EARTHBUILD(EarthBuildSpell.class),

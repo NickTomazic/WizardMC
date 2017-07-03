@@ -31,10 +31,10 @@ public class FireWand implements Wand {
     @Override
     public LinkedList<SpellType> getSpells() {
         return new LinkedList<>(Arrays.asList(
-                SpellType.FIRECIRCLE,
+                SpellType.FIRECREEPER,
                 SpellType.FIREEXPLOSION,
                 SpellType.FIRELIGHTNING,
-                SpellType.FIRESHIELD,
+                SpellType.FIREBLOCK,
 
                 SpellType.HEAL
         ));

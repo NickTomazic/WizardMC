@@ -17,8 +17,6 @@ public class Main extends JavaPlugin {
 
     private WizardManager wizardManager;
 
-    // TODO: add more spells
-
     @Override
     public void onEnable() {
         Bukkit.getLogger().info("[WizardMC] WizardMC v" + version + " has been enabled.");
@@ -30,12 +28,6 @@ public class Main extends JavaPlugin {
         new RegisterCommands(this);
         new RegisterListeners(this);
         new RegisterCrafting(wizardManager.getWandManager(), wizardManager.getOutfitManager());
-
-        Player nickdev = Bukkit.getPlayer("NickDEV");
-        nickdev.getInventory().setItem(0, wizardManager.getOutfitManager().getOutfit(Element.FIRE).getOutfitPack());
-        nickdev.getInventory().setItem(1, wizardManager.getOutfitManager().getOutfit(Element.WATER).getOutfitPack());
-        nickdev.getInventory().setItem(2, wizardManager.getOutfitManager().getOutfit(Element.AIR).getOutfitPack());
-        nickdev.getInventory().setItem(3, wizardManager.getOutfitManager().getOutfit(Element.EARTH).getOutfitPack());
     }
 
     @Override
