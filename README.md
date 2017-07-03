@@ -1,5 +1,5 @@
 <img src="http://i.imgur.com/eKosccA.png">
-Wizard plugin for Minecraft Servers, adds wands, spells & special wizard outfits. 
+Wizard plugin for Minecraft Servers, adds wands, spells & special wizard outfits.<br><br>
 
 ![alt text](http://i.imgur.com/6Uts8n3.png "Commands")
 /wizard - Default plugin command   
