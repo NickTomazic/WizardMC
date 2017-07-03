@@ -7,6 +7,7 @@ Wizard plugin for Minecraft Servers, adds wands, spells & special wizard outfits
 
 ![alt text](http://i.imgur.com/VvsKyEA.png "Permissions")
 wizard.* - Grants you all the permissions below   
+wizard.gui - Allows you to open the GUI
 wizard.wand.use - Allows you to use the wands   
 wizard.outfit.use - Allows you to open the OutfitPacks
 
