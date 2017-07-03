@@ -20,6 +20,8 @@ public enum SpellType {
 
     // Earth spells
     EARTHBUILD(EarthBuildSpell.class),
+    EARTHTHROW(EarthThrowSpell.class),
+    EARTHFALL(EarthFallSpell.class),
 
     // Water spells
     WATERGUARDIANATTACK(WaterGuardianAttack.class),

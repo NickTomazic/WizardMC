@@ -31,9 +31,9 @@ public class AirWand implements Wand {
     @Override
     public LinkedList<SpellType> getSpells() {
         return new LinkedList<>(Arrays.asList(
+                SpellType.AIRSHOOT,
                 SpellType.AIRJUMP,
                 SpellType.AIRFLY,
-                SpellType.AIRSHOOT,
 
                 SpellType.HEAL
         ));

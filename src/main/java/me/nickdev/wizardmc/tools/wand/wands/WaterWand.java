@@ -31,8 +31,8 @@ public class WaterWand implements Wand {
     @Override
     public LinkedList<SpellType> getSpells() {
         return new LinkedList<>(Arrays.asList(
-                SpellType.WATERTRAP,
                 SpellType.WATERGUARDIANATTACK,
+                SpellType.WATERTRAP,
 
                 SpellType.HEAL
         ));

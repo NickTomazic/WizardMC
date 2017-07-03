@@ -31,9 +31,9 @@ public class FireWand implements Wand {
     @Override
     public LinkedList<SpellType> getSpells() {
         return new LinkedList<>(Arrays.asList(
-                SpellType.FIRECREEPER,
                 SpellType.FIREEXPLOSION,
                 SpellType.FIRELIGHTNING,
+                SpellType.FIRECREEPER,
                 SpellType.FIREBLOCK,
 
                 SpellType.HEAL

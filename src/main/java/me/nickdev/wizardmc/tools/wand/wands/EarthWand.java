@@ -31,6 +31,8 @@ public class EarthWand implements Wand {
     @Override
     public LinkedList<SpellType> getSpells() {
         return new LinkedList<>(Arrays.asList(
+                SpellType.EARTHTHROW,
+                SpellType.EARTHFALL,
                 SpellType.EARTHBUILD,
 
                 SpellType.HEAL
