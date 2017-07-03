@@ -1,6 +1,8 @@
 package me.nickdev.wizardmc.tools.outfit;
 
 import me.nickdev.wizardmc.Main;
+import me.nickdev.wizardmc.chat.O;
+import me.nickdev.wizardmc.chat.P;
 import me.nickdev.wizardmc.utils.ListenerComponent;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -28,6 +30,11 @@ public class OutfitListeners implements ListenerComponent {
         if (action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK) {
             Outfit outfit = main.getWizardManager().getOutfitManager().identifyOutfit(clicked);
             if (outfit == null) return;
+
+            if (!player.hasPermission("wizard.outfit.use")) {
+                player.sendMessage(P.PREFIX.getText() + O.NO_PERMISSION.getText());
+                return;
+            }
 
             player.setItemInHand(null);
             player.getInventory().addItem(outfit.getArmorContents());

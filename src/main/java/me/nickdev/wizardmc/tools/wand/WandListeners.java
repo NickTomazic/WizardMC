@@ -2,6 +2,8 @@ package me.nickdev.wizardmc.tools.wand;
 
 import me.nickdev.wizardmc.Main;
 import me.nickdev.wizardmc.chat.CC;
+import me.nickdev.wizardmc.chat.O;
+import me.nickdev.wizardmc.chat.P;
 import me.nickdev.wizardmc.tools.WizardManager;
 import me.nickdev.wizardmc.tools.spell.Spell;
 import me.nickdev.wizardmc.tools.spell.SpellType;
@@ -39,6 +41,11 @@ public class WandListeners implements ListenerComponent {
         String displayName = clicked.getItemMeta().getDisplayName();
 
         if (wand == null) return;
+
+        if (!player.hasPermission("wizard.wand.use")) {
+            player.sendMessage(P.PREFIX.getText() + O.NO_PERMISSION.getText());
+            return;
+        }
 
         // right-click
         if (action == Action.RIGHT_CLICK_BLOCK || action == Action.RIGHT_CLICK_AIR) {

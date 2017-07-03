@@ -14,8 +14,12 @@ permissions:
     default: op
     description: Grants you all the plugin's permissions.
     children:
-      wizard.use: true
-  wizard.use:
-    default: op
+      wizard.gui: true
+      wizard.wand.use: true
+      wizard.outfit.use: true
   wizard.gui:
+    default: op
+  wizard.wand.use:
+    default: op
+  wizard.outfit.use:
     default: op
