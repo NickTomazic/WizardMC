@@ -31,6 +31,7 @@ public class OutfitListeners implements ListenerComponent {
 
             player.setItemInHand(null);
             player.getInventory().addItem(outfit.getArmorContents());
+            event.setCancelled(true);
         }
     }
 }
