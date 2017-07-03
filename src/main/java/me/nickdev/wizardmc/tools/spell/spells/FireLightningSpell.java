@@ -2,13 +2,11 @@ package me.nickdev.wizardmc.tools.spell.spells;
 
 import me.nickdev.wizardmc.Main;
 import me.nickdev.wizardmc.tools.spell.Spell;
+import me.nickdev.wizardmc.utils.BlockManager;
 import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
-import org.bukkit.util.BlockIterator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +41,7 @@ public class FireLightningSpell implements Spell {
             }
         }
         if (nearEntites.size() == 0) {
-            Location location = getTargetBlock(player, 20).getLocation();
+            Location location = BlockManager.getTargetBlock(player, 20).getLocation();
             location.getWorld().strikeLightning(location);
             location.getWorld().strikeLightning(location);
             return;
@@ -52,18 +50,5 @@ public class FireLightningSpell implements Spell {
             entity.getLocation().getWorld().strikeLightning(entity.getLocation());
             entity.getLocation().getWorld().strikeLightning(entity.getLocation());
         }
-    }
-
-    private Block getTargetBlock(Player player, int range) {
-        BlockIterator iter = new BlockIterator(player, range);
-        Block lastBlock = iter.next();
-        while (iter.hasNext()) {
-            lastBlock = iter.next();
-            if (lastBlock.getType() == Material.AIR) {
-                continue;
-            }
-            break;
-        }
-        return lastBlock;
     }
 }

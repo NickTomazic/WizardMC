@@ -32,7 +32,9 @@ public class AirWand implements Wand {
     public LinkedList<SpellType> getSpells() {
         return new LinkedList<>(Arrays.asList(
                 SpellType.AIRJUMP,
-                SpellType.AIRFLY
+                SpellType.AIRFLY,
+
+                SpellType.HEAL
         ));
     }
 

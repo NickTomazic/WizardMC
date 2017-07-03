@@ -34,7 +34,9 @@ public class FireWand implements Wand {
                 SpellType.FIRECIRCLE,
                 SpellType.FIREEXPLOSION,
                 SpellType.FIRELIGHTNING,
-                SpellType.FIRESHIELD
+                SpellType.FIRESHIELD,
+
+                SpellType.HEAL
         ));
     }
 

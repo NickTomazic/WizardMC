@@ -1,6 +1,6 @@
 package me.nickdev.wizardmc.tools;
 
-import me.nickdev.wizardmc.tools.outfit.*;
+import me.nickdev.wizardmc.tools.outfit.Outfit;
 import me.nickdev.wizardmc.tools.outfit.outfits.AirOutfit;
 import me.nickdev.wizardmc.tools.outfit.outfits.EarthOutfit;
 import me.nickdev.wizardmc.tools.outfit.outfits.FireOutfit;

@@ -2,30 +2,30 @@ package me.nickdev.wizardmc.tools.spell.spells;
 
 import me.nickdev.wizardmc.Main;
 import me.nickdev.wizardmc.tools.spell.Spell;
-import me.nickdev.wizardmc.utils.BlockManager;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
-public class FireShieldSpell implements Spell {
+public class HealSpell implements Spell {
     @Override
     public String getName() {
-        return "FireShield";
+        return "Heal";
     }
 
     @Override
     public String[] getDescription() {
         return new String[] {
-                "Creates a shield out of obsidian to protect you."
+                "Adds regeneration effect."
         };
     }
 
     @Override
     public int getRequiredMana() {
-        return 0;
+        return 30;
     }
 
     @Override
     public void activate(Main main, Player player) {
-        BlockManager.createShield(main, BlockManager.getTargetBlock(player, 25).getLocation(), Material.WATER, 10);
+        player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 200, 1));
     }
 }

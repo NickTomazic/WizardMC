@@ -31,10 +31,10 @@ public class WaterWand implements Wand {
     @Override
     public LinkedList<SpellType> getSpells() {
         return new LinkedList<>(Arrays.asList(
-                SpellType.FIRECIRCLE,
-                SpellType.FIREEXPLOSION,
-                SpellType.FIRELIGHTNING,
-                SpellType.FIRESHIELD
+                SpellType.WATERTRAP,
+                SpellType.WATERGUARDIANATTACK,
+
+                SpellType.HEAL
         ));
     }
 

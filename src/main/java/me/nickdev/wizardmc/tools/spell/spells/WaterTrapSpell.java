@@ -6,22 +6,22 @@ import me.nickdev.wizardmc.utils.BlockManager;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
-public class FireShieldSpell implements Spell {
+public class WaterTrapSpell implements Spell {
     @Override
     public String getName() {
-        return "FireShield";
+        return "WaterTrap";
     }
 
     @Override
     public String[] getDescription() {
         return new String[] {
-                "Creates a shield out of obsidian to protect you."
+                "Spawns a water trap!"
         };
     }
 
     @Override
     public int getRequiredMana() {
-        return 0;
+        return 50;
     }
 
     @Override

@@ -1,31 +1,33 @@
 package me.nickdev.wizardmc.tools.spell.spells;
 
 import me.nickdev.wizardmc.Main;
+import me.nickdev.wizardmc.chat.CC;
 import me.nickdev.wizardmc.tools.spell.Spell;
 import me.nickdev.wizardmc.utils.BlockManager;
-import org.bukkit.Material;
+import me.nickdev.wizardmc.utils.MobManager;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
-public class FireShieldSpell implements Spell {
+public class WaterGuardianAttack implements Spell {
     @Override
     public String getName() {
-        return "FireShield";
+        return "WaterGuardianAttack";
     }
 
     @Override
     public String[] getDescription() {
         return new String[] {
-                "Creates a shield out of obsidian to protect you."
+                "Spawns a guardian at the block you're looking at."
         };
     }
 
     @Override
     public int getRequiredMana() {
-        return 0;
+        return 30;
     }
 
     @Override
     public void activate(Main main, Player player) {
-        BlockManager.createShield(main, BlockManager.getTargetBlock(player, 25).getLocation(), Material.WATER, 10);
+        MobManager.spawnMob(main, BlockManager.getTargetBlock(player, 30).getLocation(), EntityType.GUARDIAN, CC.SPECIAL + "Guardian", 200);
     }
 }
