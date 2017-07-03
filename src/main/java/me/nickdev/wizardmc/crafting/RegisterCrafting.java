@@ -15,7 +15,7 @@ public class RegisterCrafting {
         this.wandManager = wandManager;
 
         registerWand(Element.FIRE, Material.BLAZE_ROD, Material.BLAZE_POWDER);
-        registerWand(Element.WATER, Material.STICK, Material.LAPIS_BLOCK);
+        registerWand(Element.WATER, Material.STICK, Material.EMERALD_BLOCK);
         registerWand(Element.AIR, Material.STICK, Material.IRON_BLOCK);
         registerWand(Element.EARTH, Material.STICK, Material.GOLD_BLOCK);
     }
