@@ -52,7 +52,7 @@ public class WizardManager implements ListenerComponent {
         pInv.clear();
         pInv.setItem(0, getWandManager().getWand(element).getItemStack());
         pInv.setItem(7, new ItemStack(Material.COOKED_BEEF, 64));
-        pInv.setItem(8, ItemManager.createItem(Material.CHEST, 1, (short) 0, CC.NORMAL + "Change wizardmc type!"));
+        pInv.setItem(8, ItemManager.createItem(Material.CHEST, 1, (short) 0, CC.NORMAL + "Change wizard type!"));
         getOutfitManager().getOutfit(element).dressPlayer(player);
         sendHelp(player, element);
     }

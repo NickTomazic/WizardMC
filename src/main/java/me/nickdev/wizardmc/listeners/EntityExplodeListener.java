@@ -17,7 +17,7 @@ public class EntityExplodeListener implements ListenerComponent {
     }
 
     @EventHandler
-    public void onExplode(EntityExplodeEvent event) {
+    private void onExplode(EntityExplodeEvent event) {
         if (event.getEntity() instanceof TNTPrimed) {
             for (Block block : event.blockList()) {
                 final float x = -2.0f + (float)(Math.random() * 5.0);

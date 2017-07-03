@@ -19,7 +19,7 @@ public class FireWand implements Wand {
     @Override
     public String[] getDescription() {
         return new String[] {
-                "firewand-description"
+                "A magical wand for FireWizards!"
         };
     }
 

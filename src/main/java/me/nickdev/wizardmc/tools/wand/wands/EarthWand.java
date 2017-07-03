@@ -19,7 +19,7 @@ public class EarthWand implements Wand {
     @Override
     public String[] getDescription() {
         return new String[] {
-                "earthwand-description"
+                "A magical wand for EarthWizards!"
         };
     }
 

@@ -19,7 +19,7 @@ public class WaterWand implements Wand {
     @Override
     public String[] getDescription() {
         return new String[] {
-                "waterwand-description"
+                "A magical wand for WaterWizards!"
         };
     }
 

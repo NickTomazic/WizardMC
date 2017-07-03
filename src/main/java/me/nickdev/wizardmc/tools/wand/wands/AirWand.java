@@ -19,7 +19,7 @@ public class AirWand implements Wand {
     @Override
     public String[] getDescription() {
         return new String[] {
-                "airwand-description"
+                "A magical wand for AirWizards!"
         };
     }
 
