@@ -1,6 +1,7 @@
 package me.nickdev.wizardmc;
 
 import me.nickdev.wizardmc.commands.RegisterCommands;
+import me.nickdev.wizardmc.crafting.RegisterCrafting;
 import me.nickdev.wizardmc.listeners.RegisterListeners;
 import me.nickdev.wizardmc.tools.WizardManager;
 import org.bukkit.Bukkit;
@@ -26,6 +27,7 @@ public class Main extends JavaPlugin {
         // Registering everything
         new RegisterCommands(this);
         new RegisterListeners(this);
+        new RegisterCrafting(wizardManager.getWandManager());
     }
 
     @Override
